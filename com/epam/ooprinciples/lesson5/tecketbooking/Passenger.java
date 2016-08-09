@@ -6,6 +6,7 @@ public class Passenger {
 	private String firstName;
 	private String lastName;
 	private int age;
+	FFProgram ffProgram = new GoldFFProgram();
 	
 	
 	public Passenger(String firstName, String lastName, int age) {

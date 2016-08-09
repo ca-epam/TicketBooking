@@ -24,8 +24,8 @@ public class Program {
 		PassengerGroup passengerGroup = new PassengerGroup(list);
 		
 		
-		Flight flight1 = new Flight(123123, LocalDateTime.now(), "Bp", "London", 2000);
-		Flight flight2 = new Flight(123124, LocalDateTime.now(), "London", "NY", 5000);
+		Flight flight1 = new Flight(123123, LocalDateTime.now(), "Bp", "London", 20000);
+		Flight flight2 = new Flight(123124, LocalDateTime.now(), "London", "NY", 50000);
 		Flight [] arrayFlight = { flight1, flight2 };
 
 		Itinary itinary = new Itinary(arrayFlight);
