@@ -9,11 +9,13 @@ public class Ticket {
 		super();
 		this.passenger = passenger;
 		this.flight = flight;
+		initPrize();
 		
 	}
 	
 	private void initPrize(){
 		basePrize = flight.getDistance()*100;
+		
 	}
 	
 	
@@ -21,7 +23,15 @@ public class Ticket {
 	@Override
 	public String toString() {
 		
-		return ""+basePrize;
+		return ""+basePrize+"HUF";
+	}
+
+	public int getBasePrize() {
+		return basePrize;
+	}
+
+	public int getDiscountedPrize() {
+		return discountedPrize;
 	}
 	
 }
