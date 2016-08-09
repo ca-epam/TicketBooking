@@ -1,7 +1,9 @@
 package com.epam.ooprinciples.lesson5.tecketbooking;
-
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.annotation.Generated;
 
 public class Program {
 
@@ -21,7 +23,13 @@ public class Program {
 		PassengerGroup passengerGroup = new PassengerGroup(list);
 		
 		
-		//Itinary itinary = new Itinary(flights);
+		Flight flight1 = new Flight(123123, LocalDateTime.now(), "Bp", "London", 2000);
+		Flight flight2 = new Flight(123124, LocalDateTime.now(), "London", "NY", 5000);
+		List<Flight> listFlights = new ArrayList<>();
+		listFlights.add(flight1);
+		listFlights.add(flight2);
+
+		Itinary itinary = new Itinary(listFlights);
 		Trip trip = new Trip(itinary);
 		
 	}
