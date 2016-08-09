@@ -27,6 +27,14 @@ public class Itinary {
 		return flights;
 	}
 
+	@Override
+	public String toString() {
+		String result = "";
+		for(Flight f:flights){
+			result+=f+"\n";
+		}
+		return result;
+	}
 
 
 	

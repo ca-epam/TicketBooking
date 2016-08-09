@@ -23,5 +23,13 @@ private void initTickets(PassengerGroup gp, Itinary i ){
 		}
 	}
 }
-
+@Override
+public String toString() {
+	// TODO Auto-generated method stub
+	String result = "";
+	for(Passenger p : passengerGroup.getPassengerGroup()){
+		result+= p+"\n"+itinary+"\n\n";
+	}
+	return result;
+}
 }
