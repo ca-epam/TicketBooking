@@ -63,7 +63,7 @@ public class Passenger {
 
 	@Override
 	public String toString() {
-		String str = "\t" + firstName + " " + lastName + " (" + age + ")";
+		String str = firstName + " " + lastName + " (" + age + ")";
 		return str;
 	}
 	

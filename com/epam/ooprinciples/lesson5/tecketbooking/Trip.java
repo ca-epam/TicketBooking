@@ -16,6 +16,13 @@ public class Trip {
 	}
 
 
+
+public void addPassengerGroup(){
+	
+	
+}
+
+
 private void initTickets(PassengerGroup gp, Itinary i ){
 	for(Passenger p : gp.getPassengerGroup()){
 		for(Flight f : itinary.getFlights()){
@@ -23,5 +30,13 @@ private void initTickets(PassengerGroup gp, Itinary i ){
 		}
 	}
 }
-
+@Override
+public String toString() {
+	// TODO Auto-generated method stub
+	String result = "";
+	for(Passenger p : passengerGroup.getPassengerGroup()){
+		result+= p+"\n"+itinary+"\n\n";
+	}
+	return result;
+}
 }

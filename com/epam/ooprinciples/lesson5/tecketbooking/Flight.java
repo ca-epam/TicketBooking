@@ -36,6 +36,11 @@ public class Flight {
 	public int getDistance() {
 		return distance;
 	}
+
+	@Override
+	public String toString() {
+		return origin+"-"+departure+" ("+distance+"km)";
+	}
 	
 	
 }

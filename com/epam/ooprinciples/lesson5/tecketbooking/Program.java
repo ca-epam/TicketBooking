@@ -31,7 +31,7 @@ public class Program {
 		Itinary itinary = new Itinary(arrayFlight);
 		Trip trip = new Trip(itinary, passengerGroup);
 		
-		System.out.println(passengerGroup);
+		System.out.println(trip);
 		
 	}
 	
