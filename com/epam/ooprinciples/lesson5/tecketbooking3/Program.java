@@ -17,23 +17,24 @@ public class Program {
 		Passenger passenger1 = new Passenger("Joco", "Nagy", 27);
 		Passenger passenger2 = new Passenger("Adrian", "Czigany", 26);
 		
-		passenger1.addTravelledKms(10000);
 		
-//		List<Passenger> list = new ArrayList<>();
-//		list.add(passenger1);
-//		list.add(passenger2);
-//		
-//		PassengerGroup passengerGroup = new PassengerGroup(list);
-//		
-//		
-//		Flight flight1 = new Flight(123123, LocalDateTime.now(), "Bp", "London", 20000);
-//		Flight flight2 = new Flight(123124, LocalDateTime.now(), "London", "NY", 50000);
-//		Flight [] arrayFlight = { flight1, flight2 };
-//
-//		Itinary itinary = new Itinary(arrayFlight);
-//		Trip trip = new Trip(itinary, passengerGroup);
-//		
-//		System.out.println(trip);
+		
+		List<Passenger> list = new ArrayList<>();
+		list.add(passenger1);
+		list.add(passenger2);
+		
+		PassengerGroup passengerGroup = new PassengerGroup(list);
+		
+		
+		Flight flight1 = new Flight(123123, LocalDateTime.now(), "Bp", "London", 30000);
+		Flight flight2 = new Flight(123124, LocalDateTime.now(), "London", "NY", 60000);
+		Flight [] arrayFlight = { flight1, flight2 };
+
+		Itinary itinary = new Itinary(arrayFlight);
+		Trip trip = new Trip(itinary, passengerGroup);
+		
+		System.out.println(trip);
+		System.out.println("(SUM OF CREATED TICKET: " + Ticket.TICKET_COUNTER + ")");
 		
 	}
 	

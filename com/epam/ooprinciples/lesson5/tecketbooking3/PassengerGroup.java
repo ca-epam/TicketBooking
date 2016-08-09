@@ -7,20 +7,24 @@ public class PassengerGroup {
 	private static int id = 0;
 	private List<Passenger> passengerGroup;
 	private int totalPrice;
+	private int currentTotalDiscount;
 
 	public PassengerGroup(List<Passenger> passengerGroup) {
 		PassengerGroup.id++;
 		this.passengerGroup = passengerGroup;
-		calculateTotalPrice();
+		calculateCurrentTotalDiscount();
 	}
 
-	private void calculateTotalPrice() {
+	private void calculateCurrentTotalDiscount() {
 		int sum = 0;
-		for(Passenger p : passengerGroup) {
-			
+		for (Passenger p : passengerGroup) {
+			if (p.getFfProgram() != null) {
+				sum += p.getFfProgram().getDiscount();
+			}
 		}
+		this.currentTotalDiscount = sum / this.passengerGroup.size();
 	}
-	
+
 	public static int getId() {
 		return id;
 	}
@@ -45,18 +49,21 @@ public class PassengerGroup {
 		this.totalPrice = totalPrice;
 	}
 
+	public int getCurrentTotalDiscount() {
+		return currentTotalDiscount;
+	}
+
+	public void setCurrentTotalDiscount(int currentTotalDiscount) {
+		this.currentTotalDiscount = currentTotalDiscount;
+	}
+
 	@Override
 	public String toString() {
 		String str = "PassengerGroup : \n";
-		for(Passenger p : passengerGroup) {
-			str+= p.toString();
+		for (Passenger p : passengerGroup) {
+			str += p.toString();
 		}
 		return str;
 	}
 
-	
-	
-	
-	
-		
 }
