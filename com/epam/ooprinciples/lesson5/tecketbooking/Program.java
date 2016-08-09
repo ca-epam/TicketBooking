@@ -20,6 +20,8 @@ public class Program {
 		
 		PassengerGroup passengerGroup = new PassengerGroup(list);
 		
+		
+		
 	}
 	
 	
