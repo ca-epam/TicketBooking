@@ -5,19 +5,23 @@ import java.util.List;
 public class Trip {
 	private static int id = 0;
 	private Itinary itinary;
-	private List<PassengerGroup> passengerGroups;
+	private PassengerGroup passengerGroup;
 	private List<Ticket> tickets;
 
-	public Trip(Itinary itinary) {
+	public Trip(Itinary itinary, PassengerGroup passengerGroup) {
 		super();
-		this.id++;
+		Trip.id++;
 		this.itinary = itinary;
+		this.passengerGroup = passengerGroup;
 	}
 
-public void addPassengerGroup(){
-	
-	
-}
 
+private void initTickets(PassengerGroup gp, Itinary i ){
+	for(Passenger p : gp.getPassengerGroup()){
+		for(Flight f : itinary.getFlights()){
+			tickets.add(new Ticket(p, f));
+		}
+	}
+}
 
 }
