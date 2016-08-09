@@ -4,9 +4,9 @@ import java.util.List;
 
 public class Itinary {
 	private int sumOfDistances = 0;
-	private List<Flight> flights;
+	private Flight[] flights;
 	
-	public Itinary(List<Flight> flights) {
+	public Itinary(Flight[] flights) {
 		super();
 		this.flights = flights;
 		calculateDistance();
@@ -23,9 +23,11 @@ public class Itinary {
 		return sumOfDistances;
 	}
 
-	public List<Flight> getFlights() {
+	public Flight[] getFlights() {
 		return flights;
 	}
+
+
 
 	
 	

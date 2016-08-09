@@ -9,6 +9,7 @@ public class Program {
 
 	public static void main(String [] args) {
 		Program program = new Program();
+		program.start();
 	}
 	
 	private void start() {
@@ -25,12 +26,12 @@ public class Program {
 		
 		Flight flight1 = new Flight(123123, LocalDateTime.now(), "Bp", "London", 2000);
 		Flight flight2 = new Flight(123124, LocalDateTime.now(), "London", "NY", 5000);
-		List<Flight> listFlights = new ArrayList<>();
-		listFlights.add(flight1);
-		listFlights.add(flight2);
+		Flight [] arrayFlight = { flight1, flight2 };
 
-		Itinary itinary = new Itinary(listFlights);
-		Trip trip = new Trip(itinary);
+		Itinary itinary = new Itinary(arrayFlight);
+		Trip trip = new Trip(itinary, passengerGroup);
+		
+		System.out.println(passengerGroup);
 		
 	}
 	

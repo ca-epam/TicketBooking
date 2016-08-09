@@ -58,6 +58,16 @@ public class Passenger {
 	public void booking() {
 		
 	}
+
+
+
+	@Override
+	public String toString() {
+		String str = "\t" + firstName + " " + lastName + " (" + age + ")";
+		return str;
+	}
+	
+	
 	
 	
 	

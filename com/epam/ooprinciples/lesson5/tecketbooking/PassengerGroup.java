@@ -37,6 +37,16 @@ public class PassengerGroup {
 		this.totalPrice = totalPrice;
 	}
 
+	@Override
+	public String toString() {
+		String str = "PassengerGroup : \n";
+		for(Passenger p : passengerGroup) {
+			str+= p.toString();
+		}
+		return str;
+		//return "PassengerGroup [passengerGroup=" + passengerGroup + ", totalPrice=" + totalPrice + "]";
+	}
+
 	
 	
 	
