@@ -21,6 +21,8 @@ public class Program {
 		PassengerGroup passengerGroup = new PassengerGroup(list);
 		
 		
+		//Itinary itinary = new Itinary(flights);
+		Trip trip = new Trip(itinary);
 		
 	}
 	
