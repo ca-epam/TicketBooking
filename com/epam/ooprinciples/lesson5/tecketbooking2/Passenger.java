@@ -58,13 +58,12 @@ public class Passenger {
 		return 0;
 	}
 	public void addDistance(int distance) {
-		//System.out.println("Adding distance: "+distance);
 		this.distance += distance;
-		if (distance>100000){
-			ffProgram = new GoldFFProgram();
-		}else if(distance>50000){
-			ffProgram= new SilverFFProgram();
-		}
+			if (this.distance>100000){
+				ffProgram = new GoldFFProgram();
+			}else if(this.distance>50000){
+				ffProgram= new SilverFFProgram();
+			}
 	}
 	public void setAge(int age) {
 		this.age = age;
