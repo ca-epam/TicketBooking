@@ -36,7 +36,7 @@ public class Trip {
 		for (Ticket t : tickets) {
 			sum += t.getBasePrice();
 		}
-		String result = "prize: " + sum + "HUF\n";
+		String result = "price: " + sum + "HUF\n";
 		for (Passenger p : passengerGroup.getPassengerGroup()) {
 			result += p + "\n" + itinary + "\n\n";
 		}
